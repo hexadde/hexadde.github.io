@@ -1,5 +1,6 @@
 body {
     background-color: rgb(0, 0, 0);
+    margin:0;
 }
 
 * {
@@ -10,14 +11,26 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 10px 10px;
     column-count: 3;
+
+}
+
+.container2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.colly {
+    flex: 1 1 auto;
+    color: white;
+    font-size: 20px;
 }
 
 .flex-item {
     background-color: rgb(102, 73, 129);
     flex: 1 1 auto;
-    border: solid #4d0046 3px;
+    border: solid #000000 2px;
     font-size: 20px;
     padding-left: 7px;
     color:rgb(255, 255, 255);
@@ -44,13 +57,101 @@ body {
     color: black;
 }
 
+@keyframes sos {
+    0% {background-color: #820000;}
+    50% {background-color: black;}
+    100% {background-color: #820000;}
+}
 
+#flex-item9:hover {
+    background-color: #820000;
+    transition-duration: 2s;
+    animation-delay: 2s;
+    animation-name: sos;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+#sticky {
+    background-color: rgb(214, 214, 214);
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    padding: 5px;
+    border: solid black 2px;
+}
+
+
+/*#stick {
+    display: none;
+}
+#stick:target {
+    background-color: rgb(214, 214, 214);
+    position: -webkit-sticky;
+    position: sticky;
+    padding: 5px;
+    border: solid black 2px;
+    display: block;
+    top: 0;
+    right: 0;
+}
+
+div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    background-color: #cae8ca;
+    border: 2px solid #4CAF50;
+  }
+*/
 
 
 .usrpic {
     width: 80px;
     clip-path: circle();
     vertical-align: middle;
+}
+
+.ammedup {
+    width: 80px;
+    clip-path: circle();
+    vertical-align: middle;
+}
+
+@keyframes god {
+    from {width: 0%}
+    to {width: 100%}
+}
+
+@keyframes etext {
+    0% {color:rgb(255, 255, 255, 0)}
+    50% {color:rgb(255, 255, 255, 0)}
+    100% {color:rgb(255,255,255,1)}
+}
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    transition: width 3s;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.85);
+    z-index: 2;
+}
+
+#estext {
+    font-size: 60px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    color: rgb(255, 255, 255);
 }
 
 .usrname {
@@ -64,15 +165,90 @@ body {
     font-size: 15px;
 }
 
+.lovecalc {
+    background-image: url("./img/Love_gcalc.png");
+    background-repeat: no-repeat;
+    aspect-ratio: 4/3;
+    background-size: contain;
+}
+
+.lovecalc1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-count: 3;
+}
+
+.fi {
+    color: #000000;
+    margin-left: 7%;
+    margin-right: 7%;
+    /*margin-top: 5%;*/
+    font-size: 20px;
+    height: fit-content;
+}
+
+#bobby {
+    margin-top: 7.5%;
+    background-color: rgb(0, 0, 0, 0);
+    border: 0px;
+    
+}
+
+.gi {
+    width: calc((980/2160)*100%);
+    height: calc(937/1620*100%);
+    margin-top: 8%;
+    margin-bottom: 0%;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid #3c0063 5px;
+}
+
+/*.heart {
+    width: calc((980/2160)*100%);
+    height: calc(937/1620*100%);
+    /*margin-top: calc(100% - ((937/1620)*100%)-7.5%);
+    margin-top: 8%;
+    margin-bottom: 0%;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+}
+*/
+.frommyheart {
+  position: absolute;
+  font-size: 60px;
+  top: 105%;
+  color: white;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#heart {
+    display: block;
+    object-fit: cover;
+    object-position: 50% 0%;
+    height: 100%;
+    width:100%;
+    margin-bottom: 0%;
+    margin-top: auto;
+}
+
+@keyframes thicc {
+    0% {height: 0%;}
+    100% {height: 100%;}
+}
 
 .header {
     padding: 20px;
     padding-left: 40px;
     text-align: left;
-    background: #07ae02;
+    background: #06004d;
     transition: background-color 4s ease-out 100ms;
     color: rgb(255, 255, 255);
     font-size: 30px;
+    font-family: "Permanent Marker";
 }  
 
 .header:hover {
@@ -84,4 +260,27 @@ body {
     padding-top: 5px;
 }
 
+#c1 {
+    background-color: #63000c;
+}
+
+#c2 {
+    background-color: #630040;
+}
+
+#c3, #boxc1, #boxc3, #boxc5, #boxc7, #flex-item8 {
+    background-color: #600063;
+}
+
+#c4 {
+    background-color: #3c0063;
+}
+
+#boxc2, #boxc4, #boxc6, #boxc8, #flex-item9 {
+    background-color: #992c72;
+}
+
+#flex-item1 {
+    background-color: #c7258e;
+}
 /* CSS Document */
