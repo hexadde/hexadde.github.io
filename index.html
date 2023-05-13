@@ -1,18 +1,23 @@
- <!DOCTYPE html>
- <html lang="en">
- <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pinapples on pizza deserve rights</title>
+    <title>HYC</title>
     <link rel="stylesheet" href="./css/style.css">
- </head>
- <body>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Permanent Marker">
+</head>
+<body>
     <div class="header">
         <h1>Hate yourself creativly</h1>
     </div>
-    &nbsp;
-    
+    <div class="container2">
+        <div class="colly" id="c1">Home</div>
+        <div class="colly" id="c2">Love calculator</div>
+        <div class="colly" id="c3">Horoscope</div>
+        <div class="colly" id="c4">Home</div>
+    </div>
     
     
     <div class="container">
@@ -21,70 +26,99 @@
                 <h2>Reviews:</h2>
             </div>
             
-            <div class="flex-item">
+            <div class="flex-item" id="boxc1">
                 <img src="./img/Brandon.png" class="usrpic">
                 <span class="usrname">cool-guy-brandon</span>
             </div>
             
-            <div class="flex-item">
+            <div class="flex-item" id="boxc2">
                 <div class="liltext">When I was younger my parents would always tell me that I was useless, but I was scared they might be mistaken. 
                 However after taking your course I've realised that I am indeed useless. Thank you, HYC!</div>
             </div>
 
 
-            <div class="flex-item">
+            <div class="flex-item" id ="boxc3">
                 <img src="./img/lilghost.png" class="usrpic">
                 <span class="usrname">little-ghost</span>
             </div>
             
-            <div class="flex-item">
+            <div class="flex-item" id ="boxc4">
                 <div class="liltext">My therapist used to say that I need to "accept myself" and "learn to love me for who I am". What a scam that was!
                     I'm so glad HYC taught me to embrace self-hatred
                 </div>
             </div>
 
 
-            <div class="flex-item">
-                <img src="./img/hkfan.jpeg" class="usrpic">
-                <span class="usrname">HK-fan129</span>
+            <div class="flex-item" id ="boxc5">
+                <img src="" class="usrpic">
+                <span class="usrname">cute_uwu_rainbow_girl</span>
             </div>
             
-            <div class="flex-item">
+            <div class="flex-item" id ="boxc6">
                 <div class="liltext">My whole life I've felt like nobody appreciated my inclination 2 masochism. 
-                    Thankfully, HYC introduced me to Hollow Knight and now I can't stop suffering! 10/10
+                    Thankfully, HYC introduced me to Celeste and now I can't stop suffering! 10/10
                 </div>
             </div>
 
-            <div class="flex-item">
+            <div class="flex-item" id ="boxc7">
                 <img src="./img/eye.png" class="usrpic">
                 <span class="usrname">TheCultOfShekeYaki</span>
             </div>
             
-            <div class="flex-item">
+            <div class="flex-item" id ="boxc8">
                 <div class="liltext">Finally a site that promotes healthy values. The Cult of ShekeYaki grants you our approval. May ShekeYaki surveil thou.
                 </div>
             </div>
 
 
             <div class="flex-item" id="flex-item8">
-                <img src="./img/hkfan.jpeg" class="usrpic">
+                <img src="./img/amyiscold45.png" class="ammedup" id="pain">
+                <!--<script>
+                    const amys = document.querySelector(".ammedup");
+                    document.querySelector('.ammedup').onclick = function() {help()}; 
+                    function help() {
+                        const mysrc = amys.getAttribute("src");
+                        if (mysrc === "amyiscold45.png") {
+                            amys.setAttribute("src", "amy_is_cold.png");
+                        } else {
+                            amys.setAttribute("src", "amyiscold45.png");
+                        }
+                    }
+                </script> -->
+                <div id="overlay" onclick="off()">
+                    <div id="estext">She was happy once</div>
+                </div>
+                <script>
+                    const amys = document.querySelector(".ammedup");
+                    document.querySelector('.ammedup').onclick = function() {help()}; 
+                    function help() {
+                        document.getElementById("overlay").style.display = "block";
+                        document.getElementById('overlay').style.animation="god 0.8s linear";
+                        document.getElementById('estext').style.animation="etext 1.6s linear";
+                    }
+                    function off() {
+                        document.getElementById("overlay").style.display = "none";
+                    }
+                </script>
                 <span class="usrname">amy_is_cold45</span>
             </div>
             
-            <div class="flex-item">
-                <div class="liltext">I don't have much time, soon they will delete this review, but PLEASE HELP ME.
-                    I've been trapped here for 3 weeks now, they don't let me out, they make me listen to Old McDonald had a farm for hours on repeat and 
-                    I don't know how much more I can take. If you see this, I beg you, please send help
+            <div class="flex-item" id="flex-item9">
+                <div class="liltext">I actually tried the program. It was clearly not helping so I cancelled the subscription after like a week. I guess I should've read the contract becaues HYC hunted me down. They took my
+                    family and everything I loved. They took my house they just took it; I came home one day and it was gone. They took my dog, I didn't even have a dog. They said they won't stop until I renew my subscription. I am so scared.
                 </div>
             </div>
+            
+            <div id="sticky"><a href="#stick">comment</a></div>
         </div>
+        
         
         
         <div class="col" id="col2">
             <div class="flex-item" id="flex-item4">
                 <p>Do you ever feel like you're <i>worthless</i>?</p>
                 <p>Does everyone in your life <i>hate</i> you?</p>
-                <p>Have you been telling yourself you're <i>dumb</i>, <i>incompitent</i> and will <i>never</i> achieve anything?</p>
+                <p>Have you been telling yourself you're <i>dumb</i>, <i>incompetent</i> and will <i>never</i> achieve anything?</p>
                 <p>Well, I'm here to tell you that you've been hating yourself <i>wrong</i>!</p>
                 <p><h2>With our program learn to hate yourself <b>creativly</b>!</h2></p>
                 <p>Our program includes:</p>
@@ -95,12 +129,61 @@
                     <li>ways to make this course your entire personality to further annoy everyone around you and destroy your chances of ever being loved</li>
                     <li>and so much more!</li>
                 </ul>
+                <p>You might wonder if professionals consider this healthy. That's why HYC has decided to interview proffesor Gotobed, 
+                    a graduate from Harvard university with a PhD in psychology and years of practice. This is what they had to say:</p>
             </div>
             
-            <div class="flex-item" id="flex-item5">item 5</div>
+            <div class="flex-item" id="flex-item5">
+                Yeah, honestly if you think this program is a good idea, there's no hope for you. Like go ahead, my hands are tied here.
+            </div>
             
-            <div class="flex-item" id="flex-item6">item 6</div>
+            <div class="flex-item" id="flex-item6">What an insightful and encouraging comment! Thank you so much for your input, PhD Gotobed.</div>
+            <div class="lovecalc" id="lovecalc">
+                <div class="lovecalc1">
+                    <form class="fi" id="yname">
+                        <label for="youname">Your name</label> <br>
+                        <input type="text" id="youname">
+                    </form>
+                    <button class="fi" id="bobby" type="button">Click<p></p>here</button>    
+                    <form class="fi" id="lname">
+                        <label for="lowname">Your loved ones name</label> <br>
+                        <input type="text" id="lowname">
+                    </form>
+                </div>
+                <div class="gi">
+                    <img class="heart" id="heart" src="./img/Heert.png">
+                    <div class="frommyheart">0%</div>
+                </div>
+                <!--<script>
+                    document.querySelector('#bobby').onclick = function() {cool()}; 
+                    function cool() {
+                    /*    alert("I'm working");
+                    }*/
+                        document.getElementById("heart").style.display = "block";
+                        document.getElementById('heart').style.animation="thicc 0.7s linear 0s 10 alternate-reverse";
+                        document.getElementById('estext').style.animation="etext 1.6s linear";
+                    }
+                    function off() {
+                        document.getElementById("overlay").style.display = "none";
+                    }
+                </script> -->
+            </div>
+            <script>
+                document.querySelector('#bobby').onclick = function() {fu()}; 
+                function fu() {
+                    //alert("I'm working");
+                
+                    document.getElementById("lovecalc").style.position = "absoulute";
+                    document.getElementById('heart').style.animation="thicc 0.7s linear 0s 10 alternate-reverse";
+                    document.getElementById('estext').style.animation="etext 1.6s linear";
+                /*}
+                function off() {
+                    document.getElementById("overlay").style.display = "none";*/
+                }
+            </script>
         </div>    
+
+        
         
         
         <div class="col" id="col3">
@@ -129,6 +212,7 @@
                     }
                 </script>
             </div>
+            
         </div>
     </div>
 </body>
