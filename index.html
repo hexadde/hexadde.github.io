@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Permanent Marker">
 </head>
 <body>
-    <div class="header">
+    <div class="header" id="header">
         <h1>Hate yourself creativly</h1>
     </div>
     <div class="container2">
-        <div class="colly" id="c1">Home</div>
-        <div class="colly" id="c2">Love calculator</div>
-        <div class="colly" id="c3">Horoscope</div>
-        <div class="colly" id="c4">Home</div>
+        <div class="colly" id="c1"><a href="#header">Home</a></div>
+        <div class="colly" id="c2"><a href="#lovecalc">Love calculator</a></div>
+        <div class="colly" id="c3"><a>Horoscope</a></div>
+        <div class="colly" id="c4"><a href="#flex-item2">Educational videos</a></div>
     </div>
     
     
@@ -50,7 +50,7 @@
 
 
             <div class="flex-item" id ="boxc5">
-                <img src="" class="usrpic">
+                <img src="./img/Transgender_Pride_flag.svg.png" class="usrpic">
                 <span class="usrname">cute_uwu_rainbow_girl</span>
             </div>
             
@@ -73,18 +73,6 @@
 
             <div class="flex-item" id="flex-item8">
                 <img src="./img/amyiscold45.png" class="ammedup" id="pain">
-                <!--<script>
-                    const amys = document.querySelector(".ammedup");
-                    document.querySelector('.ammedup').onclick = function() {help()}; 
-                    function help() {
-                        const mysrc = amys.getAttribute("src");
-                        if (mysrc === "amyiscold45.png") {
-                            amys.setAttribute("src", "amy_is_cold.png");
-                        } else {
-                            amys.setAttribute("src", "amyiscold45.png");
-                        }
-                    }
-                </script> -->
                 <div id="overlay" onclick="off()">
                     <div id="estext">She was happy once</div>
                 </div>
@@ -109,7 +97,19 @@
                 </div>
             </div>
             
-            <div id="sticky"><a href="#stick">comment</a></div>
+            <div id="sticky">Comment</div>
+
+            <script>
+                const bye = document.getElementById("sticky");
+                sticky.onclick = function() {gone()};
+                function gone() {
+                    sticky.style.animation="byebitch 4s linear";
+                    sticky.addEventListener("animationend", () => {
+                        sticky.style.display="none";
+                    });
+
+                }
+            </script>
         </div>
         
         
@@ -137,50 +137,56 @@
                 Yeah, honestly if you think this program is a good idea, there's no hope for you. Like go ahead, my hands are tied here.
             </div>
             
-            <div class="flex-item" id="flex-item6">What an insightful and encouraging comment! Thank you so much for your input, PhD Gotobed.</div>
+            <div class="flex-item" id="flex-item6">What an insightful and encouraging comment! Thank you so much for your input, PhD Gotobed.
+            </div>
             <div class="lovecalc" id="lovecalc">
-                <div class="lovecalc1">
-                    <form class="fi" id="yname">
-                        <label for="youname">Your name</label> <br>
-                        <input type="text" id="youname">
-                    </form>
-                    <button class="fi" id="bobby" type="button">Click<p></p>here</button>    
-                    <form class="fi" id="lname">
-                        <label for="lowname">Your loved ones name</label> <br>
-                        <input type="text" id="lowname">
-                    </form>
-                </div>
+                <form class="fi" id="yname" name="1form">
+                    <label for="youname">Your name</label> <br>
+                    <input type="text" id="youname">
+                </form>
+                <button class="fi" id="bobby" type="button">click<p></p>here</button>    
+                <form class="fi" id="lname" name="2form">
+                    <label for="lowname">Your loved ones name</label> <br>
+                    <input type="text" id="lowname">
+                </form>
                 <div class="gi">
-                    <img class="heart" id="heart" src="./img/Heert.png">
-                    <div class="frommyheart">0%</div>
+                    <img class="./img/heart" id="heart" src="./img/true_heart.png">
+                    <div id="frommyheart">?%</div>
                 </div>
-                <!--<script>
-                    document.querySelector('#bobby').onclick = function() {cool()}; 
-                    function cool() {
-                    /*    alert("I'm working");
-                    }*/
-                        document.getElementById("heart").style.display = "block";
-                        document.getElementById('heart').style.animation="thicc 0.7s linear 0s 10 alternate-reverse";
-                        document.getElementById('estext').style.animation="etext 1.6s linear";
-                    }
-                    function off() {
-                        document.getElementById("overlay").style.display = "none";
-                    }
-                </script> -->
+                <div id="lcalcdes"><b>Welcome to our love calculator</b></div>
             </div>
             <script>
+                const bottex = document.getElementById("lcalcdes");
+                const mittex = document.getElementById("frommyheart");
+
                 document.querySelector('#bobby').onclick = function() {fu()}; 
                 function fu() {
                     //alert("I'm working");
-                
-                    document.getElementById("lovecalc").style.position = "absoulute";
-                    document.getElementById('heart').style.animation="thicc 0.7s linear 0s 10 alternate-reverse";
-                    document.getElementById('estext').style.animation="etext 1.6s linear";
-                /*}
-                function off() {
-                    document.getElementById("overlay").style.display = "none";*/
+                    
+                    var yname = document.forms["1form"]["youname"].value;
+                    var lname = document.forms["2form"]["lowname"].value;
+                    if (yname == "" || lname == "") {
+                        bottex.textContent="Please, input your name and the name of your loved one.";
+                    } else {
+                        const heart2 = heart.cloneNode(true);
+                        heart.parentNode.replaceChild(heart2, heart);
+                        bottex.textContent="Calculating...";
+                        mittex.textContent="?%";
+                        heart.style.animation="thicc 0.7s linear 0s 4 alternate-reverse";
+                        heart.addEventListener("animationend", () => {
+                            bottex.textContent ="Congratulations! You are NOT compatible!";
+                            mittex.textContent="0%";
+                            
+                        });
+                    }
                 }
             </script>
+            <div class="flex-item" id="flex-item2">
+                Now, to help our dear customers get adjusted to this concept we have collected several educational videos over the web. If 
+                you feel unsure about our services, please, take a look at these materials.
+                <p><a href="https://www.youtube.com/watch?v=Wo-Ma3zc-Oo">What to do in times of distress</a></p>
+                <p><a href="https://www.youtube.com/watch?v=SckcB099zrg">How to do it</a></p>
+            </div>
         </div>    
 
         
