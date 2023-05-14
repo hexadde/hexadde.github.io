@@ -19,12 +19,24 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
+    column-gap: 10px;
+    margin-bottom: 10px;
+    margin-top: 2px;
+    position: sticky;
+    top: 0;
+    background-color: #000000;
+    padding-bottom: 5px;
+    z-index: 2;
 }
 
 .colly {
     flex: 1 1 auto;
     color: white;
     font-size: 20px;
+    height: 60px;
+    box-shadow: 5px 5px 2px 1px rgba(255, 0, 119, 0.986);
+    text-align: center;
+    padding-top: 20px;
 }
 
 .flex-item {
@@ -34,19 +46,20 @@ body {
     font-size: 20px;
     padding-left: 7px;
     color:rgb(255, 255, 255);
+    line-height: 110%;
 }
-
-/*.col {
-    flex: 1;
-}
-*/
 
 #col1, #col3 {
     flex: 1;
+    display: flex;
+    flex-direction: column;
 }
+
 
 #col2 {
     flex: 3;
+    display: flex;
+    flex-direction: column;
 }
 
 #flex-item7 {
@@ -79,38 +92,20 @@ body {
     bottom: 0;
     padding: 5px;
     border: solid black 2px;
+    display:block;
 }
 
-
-/*#stick {
-    display: none;
+@keyframes byebitch {
+    0% {background-color: rgb(214, 214, 214); color: #000000;}
+    100% {background-color: rgb(214, 214, 214, 0); color: rgb(0,0,0,0);}
 }
-#stick:target {
-    background-color: rgb(214, 214, 214);
-    position: -webkit-sticky;
-    position: sticky;
-    padding: 5px;
-    border: solid black 2px;
-    display: block;
-    top: 0;
-    right: 0;
-}
-
-div.sticky {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    padding: 5px;
-    background-color: #cae8ca;
-    border: 2px solid #4CAF50;
-  }
-*/
-
 
 .usrpic {
     width: 80px;
+    height:80px;
     clip-path: circle();
     vertical-align: middle;
+    object-fit: cover;
 }
 
 .ammedup {
@@ -166,60 +161,54 @@ div.sticky {
 }
 
 .lovecalc {
-    background-image: url("./img/Love_gcalc.png");
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-image: url("../img/Love-calc.png");
     background-repeat: no-repeat;
     aspect-ratio: 4/3;
     background-size: contain;
-}
-
-.lovecalc1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    column-count: 3;
+    position: relative;
 }
 
 .fi {
     color: #000000;
-    margin-left: 7%;
-    margin-right: 7%;
-    /*margin-top: 5%;*/
     font-size: 20px;
     height: fit-content;
+    position: absolute;
+}
+
+#yname {
+    top: 4%;
+    left: 10%;
+}
+
+#lname {
+    top: 4%;
+    right: 10%;
 }
 
 #bobby {
-    margin-top: 7.5%;
+    top: 11.5%;
+    left: 50%;
     background-color: rgb(0, 0, 0, 0);
     border: 0px;
-    
+    transform: translate(-50%, -0%);    
+    line-height: 0%;
 }
 
 .gi {
+    position: absolute;
     width: calc((980/2160)*100%);
-    height: calc(937/1620*100%);
-    margin-top: 8%;
-    margin-bottom: 0%;
-    margin-left: auto;
-    margin-right: auto;
-    border: solid #3c0063 5px;
+    height: calc((988/1620)*100%);
+    top: calc((438/1620)*100%);
+    left: 50%;
+    transform: translate(-50%, -0%);
 }
 
-/*.heart {
-    width: calc((980/2160)*100%);
-    height: calc(937/1620*100%);
-    /*margin-top: calc(100% - ((937/1620)*100%)-7.5%);
-    margin-top: 8%;
-    margin-bottom: 0%;
-    margin-left: auto;
-    margin-right: auto;
-    object-fit: cover;
-}
-*/
-.frommyheart {
+#frommyheart {
   position: absolute;
-  font-size: 60px;
-  top: 105%;
+  font-size: 6em;
+  top: 45%;
   color: white;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -231,8 +220,21 @@ div.sticky {
     object-position: 50% 0%;
     height: 100%;
     width:100%;
-    margin-bottom: 0%;
-    margin-top: auto;
+}
+
+#heart.active {
+    animation: thicc 0.7s linear 0s 10 alternate-reverse;
+}
+
+#lcalcdes {
+    position: absolute;
+    font-size: 30px;
+    color:rgb(0, 0, 0);
+    top: 92%;
+    left: 50%;
+    transform: translate(-50%, -0%);
+    width: 100%;
+    text-align: center;
 }
 
 @keyframes thicc {
@@ -283,4 +285,10 @@ div.sticky {
 #flex-item1 {
     background-color: #c7258e;
 }
+
+a:link, a:visited {
+    color: wheat;
+    text-decoration: underline;
+    cursor: auto;
+  }
 /* CSS Document */
