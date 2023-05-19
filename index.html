@@ -7,6 +7,7 @@
     <title>HYC</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Permanent Marker">
+    <script src="./js/confetti.js"></script>
 </head>
 <body>
     <div class="header" id="header">
@@ -168,18 +169,20 @@
                     if (yname == "" || lname == "") {
                         bottex.textContent="Please, input your name and the name of your loved one.";
                     } else {
-                        const heart2 = heart.cloneNode(true);
-                        heart.parentNode.replaceChild(heart2, heart);
+                        heart.classList.remove("heartache");
+                        setTimeout(()=> {heart.classList.add("heartache");}, 0);
                         bottex.textContent="Calculating...";
                         mittex.textContent="?%";
-                        heart.style.animation="thicc 0.7s linear 0s 4 alternate-reverse";
                         heart.addEventListener("animationend", () => {
-                            bottex.textContent ="Congratulations! You are NOT compatible!";
-                            mittex.textContent="0%";
-                            
+                                bottex.textContent ="Congratulations! You are NOT compatible!";
+                                mittex.textContent="0%";
+                                confetti.start(0, 50, 150);
+                                setTimeout(function() {
+                                    confetti.stop();
+                                }, 5000);
                         });
-                    }
-                }
+                    };
+                };
             </script>
             <div class="flex-item" id="flex-item2">
                 Now, to help our dear customers get adjusted to this concept we have collected several educational videos over the web. If 
