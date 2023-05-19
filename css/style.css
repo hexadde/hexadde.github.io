@@ -222,10 +222,6 @@ body {
     width:100%;
 }
 
-#heart.active {
-    animation: thicc 0.7s linear 0s 10 alternate-reverse;
-}
-
 #lcalcdes {
     position: absolute;
     font-size: 30px;
@@ -240,6 +236,10 @@ body {
 @keyframes thicc {
     0% {height: 0%;}
     100% {height: 100%;}
+}
+
+.heartache {
+    animation: thicc 0.7s linear 0s 8 alternate-reverse;
 }
 
 .header {
