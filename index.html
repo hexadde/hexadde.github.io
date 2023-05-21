@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HYC</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Permanent Marker">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy">
     <script src="./js/confetti.js"></script>
 </head>
 <body>
     <div class="header" id="header">
-        <h1>Hate yourself creativly</h1>
+        Hate yourself creativly
     </div>
     <div class="container2">
-        <div class="colly" id="c1"><a href="#header">Home</a></div>
+        <div class="colly" id="c1"><a href="#flex-item4">Home</a></div>
         <div class="colly" id="c2"><a href="#lovecalc">Love calculator</a></div>
-        <div class="colly" id="c3"><a>Horoscope</a></div>
+        <div class="colly" id="c3"><a href="#sky">Horoscope</a></div>
         <div class="colly" id="c4"><a href="#flex-item2">Educational videos</a></div>
     </div>
     
@@ -98,6 +98,30 @@
                 </div>
             </div>
             
+            
+            <div class="flex-item" id ="boxc5">
+                <img src="./img/Ducky.png" class="usrpic">
+                <span class="usrname">memelord234789</span>
+            </div>
+
+            <div class="flex-item" id ="boxc6">
+                <div class="liltext"> I hate myself for accidentally pushing classmate by trying to tackle school shooter.
+                    <p>So I was in English class when I noticed the quiet kid starting to sweat a lot, whispering to himself and get all fidgety. Now I'm no psychiatrist, 
+                    but I swear I got a vision of him getting a gun and opening fire right there in the classroom, kind of like that one movie where they all die in the end. 
+                    So I start paying close attention to him.
+                    15 minutes go by, and what do you know, he reaches for his bag and pulls out a gun. Before he even gets the chance of firing the first bullet, I rush to tackle him.
+                    I honestly wasn't thinking straight. Looking back, I guess I just didn't want anyone to be killed or something, I couldn't stand losing anyone of my classmates.
+                    The problem was, I accidentally slightly pushed back an innocent classmate who was in between the shooter and me by trying to tackle the shooter. 
+                    I instantly felt bad but kept the plan of bringing the shooter to the ground before he could kill anyone.
+                    Even though I succeeded in disarming him, I still felt bad. When everyone was thanking me and chanting my name while the cops arrested the shooter, all 
+                    I could think of was how I accidentally pushed him. I told my volunteering group and the burned victims at the hospital I visit every single day and they all agree I 
+                    did nothing wrong. I even spoke with the HIV kids after dressing like Spiderman and giving them toys and they agreed I did nothing wrong.
+                    I spoke to him 3 days later after clearing my mind a little bit and he said, "Are you kidding me? You saved my life! I can't believe you feel bad about it. 
+                    We all owe you, especially me after you revived my dad with CPR last year. I barely felt the hit".</p>
+                    <p>I'm just confused... Why can't they understand how bad I am?</p>
+                </div>
+            </div>
+
             <div id="sticky">Comment</div>
 
             <script>
@@ -140,21 +164,21 @@
             
             <div class="flex-item" id="flex-item6">What an insightful and encouraging comment! Thank you so much for your input, PhD Gotobed.
             </div>
-            <div class="lovecalc" id="lovecalc">
+            <div class="flex-item" id="lovecalc">
                 <form class="fi" id="yname" name="1form">
                     <label for="youname">Your name</label> <br>
-                    <input type="text" id="youname">
+                    <input type="text" id="winname">
                 </form>
                 <button class="fi" id="bobby" type="button">click<p></p>here</button>    
                 <form class="fi" id="lname" name="2form">
                     <label for="lowname">Your loved ones name</label> <br>
-                    <input type="text" id="lowname">
+                    <input type="text" id="losename">
                 </form>
                 <div class="gi">
                     <img id="heart" src="./img/true_heart.png">
                     <div id="frommyheart">?%</div>
                 </div>
-                <div id="lcalcdes"><b>Welcome to our love calculator</b></div>
+                <div id="lcalcdes">Welcome to our love calculator</div>
             </div>
             <script>
                 const bottex = document.getElementById("lcalcdes");
@@ -162,10 +186,9 @@
 
                 document.querySelector('#bobby').onclick = function() {fu()}; 
                 function fu() {
-                    //alert("I'm working");
                     
-                    var yname = document.forms["1form"]["youname"].value;
-                    var lname = document.forms["2form"]["lowname"].value;
+                    var yname = document.forms["1form"]["winname"].value;
+                    var lname = document.forms["2form"]["losename"].value;
                     if (yname == "" || lname == "") {
                         bottex.textContent="Please, input your name and the name of your loved one.";
                     } else {
@@ -184,9 +207,89 @@
                     };
                 };
             </script>
+            <div class="flex-item" id="sky">
+                <span class="sign" id="bow"></span>
+                <span class="sign" id="snake"></span>
+                <span class="sign" id="water"></span>
+                <span class="sign" id="tallguy"></span>
+                <span class="sign" id="vahy"></span>
+                <span class="sign" id="scorpion"></span>
+                <span class="ngis" id="cow"></span>
+                <span class="ngis" id="fish"></span>
+                <span class="ngis" id="twins"></span>
+                <span class="ngis" id="lion"></span>
+                <span class="ngis" id="crab"></span>
+                <span class="ngis" id="girl"></span>
+                <div class="sun">See your fate</div>
+                <script>
+                    var sun = document.querySelector(".sun")
+
+
+                    document.getElementById('bow').onclick = function() {bow()}; 
+                    function bow() {
+                        sun.textContent="You will fail";
+                    };
+
+                    document.getElementById('snake').onclick = function() {snake()}; 
+                    function snake() {
+                        sun.textContent="You will mess up";
+                    };
+
+                    document.getElementById('water').onclick = function() {water()}; 
+                    function water() {
+                        sun.textContent="You are NOT going to overcome your obstacles";
+                    };
+
+                    document.getElementById('tallguy').onclick = function() {tallguy()}; 
+                    function tallguy() {
+                        sun.textContent="You will be unsuccessful";
+                    };
+
+                    document.getElementById('vahy').onclick = function() {vahy()}; 
+                    function vahy() {
+                        sun.textContent="You will fizzle";
+                    };
+
+                    document.getElementById('scorpion').onclick = function() {scorpion()}; 
+                    function scorpion() {
+                        sun.textContent="You will be defeated";
+                    };
+
+                    document.getElementById('cow').onclick = function() {cow()}; 
+                    function cow() {
+                        sun.textContent="You will blunder";
+                    };
+
+                    document.getElementById('fish').onclick = function() {fish()}; 
+                    function fish() {
+                        sun.textContent="You will do wrong";
+                    };
+
+                    document.getElementById('twins').onclick = function() {twins()}; 
+                    function twins() {
+                        sun.textContent="You will go down";
+                    };
+
+                    document.getElementById('lion').onclick = function() {lion()}; 
+                    function lion() {
+                        sun.textContent="You will fall flat";
+                    };
+
+                    document.getElementById('crab').onclick = function() {crab()}; 
+                    function crab() {
+                        sun.textContent="You will slip up";
+                    };
+
+                    document.getElementById('girl').onclick = function() {girl()}; 
+                    function girl() {
+                        sun.textContent="You will make an error";
+                    };
+                </script>
+            </div>
             <div class="flex-item" id="flex-item2">
-                Now, to help our dear customers get adjusted to this concept we have collected several educational videos over the web. If 
+                Now, to help our dear customers get adjusted to this concept we have collected several educational videos and websites over the web. If 
                 you feel unsure about our services, please, take a look at these materials.
+                <p><a href="http://www.gymnaslo.cz/">How to create times of distress</a></p>
                 <p><a href="https://www.youtube.com/watch?v=Wo-Ma3zc-Oo">What to do in times of distress</a></p>
                 <p><a href="https://www.youtube.com/watch?v=SckcB099zrg">How to do it</a></p>
             </div>
@@ -196,7 +299,7 @@
         
         
         <div class="col" id="col3">
-            <div class="flex-item" id="flex-item7">
+            <div class="ad">
                 HOT SINGLES IN YOUR AREA
                 <img src="./img/Twoster.png" class="hot">
                 <img src="./img/panboy.png" class="hot">
@@ -209,7 +312,7 @@
                         var i;
                         var x = document.getElementsByClassName("hot");
                         for (i=0; i<x.length; i++) {
-                            x[i].style.display = "none"
+                            x[i].style.display = "none";
                         }
                     
                         slideIndex++;
