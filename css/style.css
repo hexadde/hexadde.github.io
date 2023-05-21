@@ -12,7 +12,8 @@ body {
     justify-content: center;
     align-items: flex-start;
     column-count: 3;
-
+    position: relative;
+    height: calc(100vh - 10vh - 12px - 5px - 7vh);
 }
 
 .container2 {
@@ -32,42 +33,64 @@ body {
 .colly {
     flex: 1 1 auto;
     color: white;
-    font-size: 20px;
-    height: 60px;
+    font-size: min(2.5vh, 45px);
+    height: 7vh;
     box-shadow: 5px 5px 2px 1px rgba(255, 0, 119, 0.986);
     text-align: center;
-    padding-top: 20px;
+    padding-top: 2.25vh;
 }
 
 .flex-item {
     background-color: rgb(102, 73, 129);
     flex: 1 1 auto;
     border: solid #000000 2px;
-    font-size: 20px;
+    font-size: min(2.3vh, 20px) ;
     padding-left: 7px;
     color:rgb(255, 255, 255);
     line-height: 110%;
 }
 
-#col1, #col3 {
-    flex: 1;
+col {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
 }
 
+
+#col1, #col3 {
+    flex: 1;
+
+}
+
+#col1 {
+    overflow-y: scroll;
+    height: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
 
 #col2 {
     flex: 3;
-    display: flex;
-    flex-direction: column;
+    overflow-y: scroll;
+    height: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-#flex-item7 {
+#col3 {
+    overflow-y: hidden;
+}
+
+.ad {
     text-align: center;
     font-size: 2vw;
     background-color: #d40000;
-    padding-right: 7px;
     color: black;
+    position: sticky;
+    top: 0;
+    display: block;
+    margin-top: 0.6%;
+    margin-left: 1%;
 }
 
 @keyframes sos {
@@ -101,17 +124,19 @@ body {
 }
 
 .usrpic {
-    width: 80px;
-    height:80px;
+    height:100%;
+    aspect-ratio: 1/1;
     clip-path: circle();
     vertical-align: middle;
     object-fit: cover;
 }
 
 .ammedup {
-    width: 80px;
+    height:100%;
+    aspect-ratio: 1/1;
     clip-path: circle();
     vertical-align: middle;
+    object-fit: cover;
 }
 
 @keyframes god {
@@ -140,7 +165,7 @@ body {
 }
 
 #estext {
-    font-size: 60px;
+    font-size: 8vh;
     position:absolute;
     top: 50%;
     left: 50%;
@@ -150,50 +175,174 @@ body {
 }
 
 .usrname {
-    font-size: 20px;
+    font-size: 2vh;
     padding-left: 5px;
 }
 
 .liltext {
     padding-top: 3px;
     padding-bottom: 3px;
-    font-size: 15px;
+    font-size: min(2vh, 15px);
 }
 
-.lovecalc {
+#lovecalc {
+    align-self: stretch;
     margin-top: 10px;
     margin-bottom: 10px;
     background-image: url("../img/Love-calc.png");
     background-repeat: no-repeat;
     aspect-ratio: 4/3;
-    background-size: contain;
+    background-size: 100% auto;
     position: relative;
+}
+
+#sky {
+    align-self: stretch;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-image: url("../img/sky.jpeg");
+    background-repeat: no-repeat;
+    aspect-ratio: 4/3;
+    background-size: 100% auto;
+    position: relative;
+}
+
+.sign {
+    background-color: rgb(179, 0, 0, 0);
+    position: absolute;
+    top: 10.5%;
+    height: 15%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    
+}
+
+#bow {
+    left: 8%;
+    width: 10%;
+}
+
+#snake {
+    left: 25%;
+    width: 18%;
+}
+
+#water {
+    left: 41%;
+    width: 10%;
+}
+
+#tallguy {
+    left: 58.5%;
+    width: 15%;
+}
+
+#vahy {
+    left: 74%;
+    width: 11%;
+}
+
+#scorpion {
+    left: 90%;
+    width: 15%;
+}
+
+.ngis {
+    background-color: rgb(179, 0, 0, 0);
+    position: absolute;
+    bottom: -3.5%;
+    height: 15%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+
+#cow {
+    left: 10.25%;
+    width: 14%;
+}
+
+#fish {
+    left: 28%;
+    width: 12%;
+}
+
+#twins {
+    left: 43.5%;
+    width: 11%;
+}
+
+#lion {
+    left: 59.5%;
+    width: 11%;
+}
+
+#crab {
+    left: 75%;
+    width: 13%;
+}
+
+#girl {
+    left: 91.5%;
+    width: 6%;
+}
+
+.sun {
+    top: 53%;
+    left: 50%;
+    background-color: #000000;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    position: absolute;
+    font-size: 3vh;
+    padding: 0.5vh;
+    width: 25%;
+    text-align: center;
+    line-height: 105%;
 }
 
 .fi {
     color: #000000;
-    font-size: 20px;
-    height: fit-content;
     position: absolute;
+    
 }
 
 #yname {
     top: 4%;
     left: 10%;
+    font-size: 3vh;
+    width: 50%;
 }
 
 #lname {
     top: 4%;
     right: 10%;
+    text-align: end;
+    font-size: 3vh;
+    width: 50%;
+}
+
+input {
+    font-size: 2.5vh;
+}
+
+#winname, #losename {
+    width: 60%;
+    padding-top: 1%;
+    margin-top: 1%;
+    padding-bottom: 1%;
 }
 
 #bobby {
-    top: 11.5%;
+    top: 14%;
     left: 50%;
-    background-color: rgb(0, 0, 0, 0);
-    border: 0px;
-    transform: translate(-50%, -0%);    
+    background-color: rgba(235, 0, 145);
+    border: solid 1px black;
+    transform: translate(-50%, -50%);    
     line-height: 0%;
+    font-size: 4vh;
+    width: 12vh;
+    height: 10vh;
 }
 
 .gi {
@@ -222,13 +371,17 @@ body {
     width:100%;
 }
 
+#heart.active {
+    animation: thicc 0.7s linear 0s 10 alternate-reverse;
+}
+
 #lcalcdes {
     position: absolute;
-    font-size: 30px;
+    font-size: 4.5vh;
     color:rgb(0, 0, 0);
-    top: 92%;
+    top: 94.5%;
     left: 50%;
-    transform: translate(-50%, -0%);
+    transform: translate(-50%, -50%);
     width: 100%;
     text-align: center;
 }
@@ -243,14 +396,16 @@ body {
 }
 
 .header {
-    padding: 20px;
-    padding-left: 40px;
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    margin-top: 0%;
+    padding-left: 5vh;
     text-align: left;
     background: #06004d;
     transition: background-color 4s ease-out 100ms;
     color: rgb(255, 255, 255);
-    font-size: 30px;
-    font-family: "Permanent Marker";
+    font-size: 7vh;
+    font-family: "Satisfy";
 }  
 
 .header:hover {
@@ -270,8 +425,13 @@ body {
     background-color: #630040;
 }
 
-#c3, #boxc1, #boxc3, #boxc5, #boxc7, #flex-item8 {
+#c3 {
     background-color: #600063;
+}
+
+#boxc1, #boxc3, #boxc5, #boxc7, #flex-item8 {
+    background-color: #600063;
+    height: 6vh;
 }
 
 #c4 {
@@ -291,4 +451,12 @@ a:link, a:visited {
     text-decoration: underline;
     cursor: auto;
   }
+
+.col1::-webkit-scrollbar {
+    display: none;
+}
+
+.col2::-webkit-scrollbar {
+    display: none;
+}
 /* CSS Document */
