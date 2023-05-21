@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy">
     <script src="./js/confetti.js"></script>
+    <script src="./js/everything.js"></script>
 </head>
 <body>
+    <script>
+        preload();
+    </script>
     <div class="header" id="header">
         Hate yourself creativly
     </div>
@@ -74,20 +78,16 @@
 
             <div class="flex-item" id="flex-item8">
                 <img src="./img/amyiscold45.png" class="ammedup" id="pain">
-                <div id="overlay" onclick="off()">
+                <div id="overlay">
                     <div id="estext">She was happy once</div>
                 </div>
                 <script>
-                    const amys = document.querySelector(".ammedup");
-                    document.querySelector('.ammedup').onclick = function() {help()}; 
-                    function help() {
-                        document.getElementById("overlay").style.display = "block";
-                        document.getElementById('overlay').style.animation="god 0.8s linear";
-                        document.getElementById('estext').style.animation="etext 1.6s linear";
-                    }
-                    function off() {
-                        document.getElementById("overlay").style.display = "none";
-                    }
+                    const amys = document.getElementById("pain");
+                    const over = document.getElementById("overlay");
+                    const estext = document.getElementById("estext");
+
+                    amys.onclick = function() {help(over, estext)};
+                    over.onclick = function() {off(over)};
                 </script>
                 <span class="usrname">amy_is_cold45</span>
             </div>
@@ -126,14 +126,7 @@
 
             <script>
                 const bye = document.getElementById("sticky");
-                sticky.onclick = function() {gone()};
-                function gone() {
-                    sticky.style.animation="byebitch 4s linear";
-                    sticky.addEventListener("animationend", () => {
-                        sticky.style.display="none";
-                    });
-
-                }
+                bye.onclick = function() {gone(bye)};       
             </script>
         </div>
         
@@ -183,29 +176,12 @@
             <script>
                 const bottex = document.getElementById("lcalcdes");
                 const mittex = document.getElementById("frommyheart");
+                var yname = document.forms["1form"]["winname"].value;
+                var lname = document.forms["2form"]["losename"].value;
+                const heart = document.getElementById("heart");
 
-                document.querySelector('#bobby').onclick = function() {fu()}; 
-                function fu() {
-                    
-                    var yname = document.forms["1form"]["winname"].value;
-                    var lname = document.forms["2form"]["losename"].value;
-                    if (yname == "" || lname == "") {
-                        bottex.textContent="Please, input your name and the name of your loved one.";
-                    } else {
-                        heart.classList.remove("heartache");
-                        setTimeout(()=> {heart.classList.add("heartache");}, 0);
-                        bottex.textContent="Calculating...";
-                        mittex.textContent="?%";
-                        heart.addEventListener("animationend", () => {
-                                bottex.textContent ="Congratulations! You are NOT compatible!";
-                                mittex.textContent="0%";
-                                confetti.start(0, 50, 150);
-                                setTimeout(function() {
-                                    confetti.stop();
-                                }, 5000);
-                        });
-                    };
-                };
+                document.querySelector('#bobby').onclick = function() {fu(yname, lname, bottex, heart, mittex)}; 
+                
             </script>
             <div class="flex-item" id="sky">
                 <span class="sign" id="bow"></span>
@@ -222,9 +198,7 @@
                 <span class="ngis" id="girl"></span>
                 <div class="sun">See your fate</div>
                 <script>
-                    var sun = document.querySelector(".sun")
-
-
+                    var sun = document.querySelector(".sun");
                     document.getElementById('bow').onclick = function() {bow()}; 
                     function bow() {
                         sun.textContent="You will fail";
@@ -308,20 +282,7 @@
                 <script>
                     var slideIndex = 0;
                     carousel();
-                    function carousel() {
-                        var i;
-                        var x = document.getElementsByClassName("hot");
-                        for (i=0; i<x.length; i++) {
-                            x[i].style.display = "none";
-                        }
                     
-                        slideIndex++;
-                        if (slideIndex > x.length) {
-                            slideIndex = 1;
-                        }
-                        x[slideIndex-1].style.display = "block";
-                        setTimeout(carousel, 3000);
-                    }
                 </script>
             </div>
             
