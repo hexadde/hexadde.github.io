@@ -16,7 +16,9 @@ function gone(x) {
 
 };
 
-function fu(y, l, b, h, m) {
+function fu(b, h, m) {
+    var y = document.forms["1form"]["winname"].value;
+    var l = document.forms["2form"]["losename"].value;
     if (y == "" || l == "") {
         b.textContent="Please, input your name and the name of your loved one.";
     } else {
@@ -31,6 +33,7 @@ function fu(y, l, b, h, m) {
                 setTimeout(function() {
                     confetti.stop();
                 }, 5000);
+                
             });
     };
 };
