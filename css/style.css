@@ -44,7 +44,7 @@ body {
     background-color: rgb(102, 73, 129);
     flex: 1 1 auto;
     border: solid #000000 2px;
-    font-size: min(2.3vh, 20px) ;
+    font-size: 2.1vh ;
     padding-left: 7px;
     color:rgb(255, 255, 255);
     line-height: 110%;
@@ -123,6 +123,7 @@ col {
     100% {background-color: rgb(214, 214, 214, 0); color: rgb(0,0,0,0);}
 }
 
+
 .usrpic {
     height:100%;
     aspect-ratio: 1/1;
@@ -175,14 +176,15 @@ col {
 }
 
 .usrname {
-    font-size: 2vh;
+    font-size: 1.5vh;
     padding-left: 5px;
 }
 
 .liltext {
     padding-top: 3px;
     padding-bottom: 3px;
-    font-size: min(2vh, 15px);
+    font-size: 2vh;
+    line-height: 100%;
 }
 
 #lovecalc {
@@ -310,7 +312,7 @@ col {
 #yname {
     top: 4%;
     left: 10%;
-    font-size: 3vh;
+    font-size: 2.5vh;
     width: 50%;
 }
 
@@ -318,7 +320,7 @@ col {
     top: 4%;
     right: 10%;
     text-align: end;
-    font-size: 3vh;
+    font-size: 2.5vh;
     width: 50%;
 }
 
@@ -340,9 +342,12 @@ input {
     border: solid 1px black;
     transform: translate(-50%, -50%);    
     line-height: 0%;
-    font-size: 4vh;
-    width: 12vh;
-    height: 10vh;
+    font-size: 2vh;
+    line-height: 100%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    display: block;
+    z-index: 6;
 }
 
 .gi {
@@ -356,11 +361,16 @@ input {
 
 #frommyheart {
   position: absolute;
-  font-size: 6em;
+  font-size: 12vh;
   top: 45%;
   color: white;
   left: 50%;
+  text-align: center;
   transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  padding-top: 50%;
+  padding-bottom: 50%;
 }
 
 #heart {
@@ -377,7 +387,7 @@ input {
 
 #lcalcdes {
     position: absolute;
-    font-size: 4.5vh;
+    font-size: 3vh;
     color:rgb(0, 0, 0);
     top: 94.5%;
     left: 50%;
@@ -449,6 +459,16 @@ input {
 a:link, a:visited {
     color: wheat;
     text-decoration: underline;
+    cursor: auto;
+  }
+
+#col1::-webkit-scrollbar {
+    display: none;
+}
+
+#col2::-webkit-scrollbar {
+    display: none;
+}
     cursor: auto;
   }
 
