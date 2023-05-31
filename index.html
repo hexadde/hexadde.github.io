@@ -11,9 +11,6 @@
     <script src="./js/everything.js"></script>
 </head>
 <body>
-    <script>
-        preload();
-    </script>
     <div class="header" id="header">
         Hate yourself creativly
     </div>
@@ -56,7 +53,7 @@
 
             <div class="flex-item" id ="boxc5">
                 <img src="./img/Transgender_Pride_flag.svg.png" class="usrpic">
-                <span class="usrname">cute_uwu_rainbow_girl</span>
+                <span class="usrname">uwurainbowgirl</span>
             </div>
             
             <div class="flex-item" id ="boxc6">
@@ -67,7 +64,7 @@
 
             <div class="flex-item" id ="boxc7">
                 <img src="./img/eye.png" class="usrpic">
-                <span class="usrname">TheCultOfShekeYaki</span>
+                <span class="usrname">TheCultOfSY</span>
             </div>
             
             <div class="flex-item" id ="boxc8">
@@ -162,7 +159,7 @@
                     <label for="youname">Your name</label> <br>
                     <input type="text" id="winname">
                 </form>
-                <button class="fi" id="bobby" type="button">click<p></p>here</button>    
+                <button class="fi" id="bobby">click here</button>    
                 <form class="fi" id="lname" name="2form">
                     <label for="lowname">Your loved ones name</label> <br>
                     <input type="text" id="losename">
@@ -179,8 +176,7 @@
                 var yname = document.forms["1form"]["winname"].value;
                 var lname = document.forms["2form"]["losename"].value;
                 const heart = document.getElementById("heart");
-
-                document.querySelector('#bobby').onclick = function() {fu(yname, lname, bottex, heart, mittex)}; 
+                document.getElementById("bobby").onclick = function() {fu(bottex, heart, mittex)}; 
                 
             </script>
             <div class="flex-item" id="sky">
